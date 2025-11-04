@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>EcoVida — Productos Naturales (Ilustrado)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Lato", sans-serif; background-color: #fafafa; color: #2c2c2c; line-height: 1.6; }
+.site-header { background: #8bc34a; color: white; padding: 1rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.header-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 0 1rem; }
+.logo { width: 55px; }
+.main-nav a { color: white; margin: 0 0.75rem; text-decoration: none; font-weight: 600; }
+.main-nav a:hover { text-decoration: underline; }
+.btn { background-color: #3f51b5; color: white; border: none; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; font-weight: bold; transition: background 0.3s ease; }
+.btn.primary { background-color: #8bc34a; }
+.btn:hover { background-color: #9c27b0; }
+.hero { display: flex; align-items: center; justify-content: center; min-height: 75vh; background-color: #f4f7f6; }
+.hero-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; max-width: 1000px; margin: auto; padding: 2rem; }
+.hero-text { flex: 1 1 45%; }
+.hero-text h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+.hero-image img { width: 100%; max-width: 380px; }
+.productos { padding: 3rem 1rem; text-align: center; }
+.productos h3 { font-size: 1.8rem; color: #3f51b5; margin-bottom: 2rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+.card { background: white; border-radius: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 180px; object-fit: contain; padding: 1rem; }
+.card-body { padding: 1rem; }
+.price { font-weight: bold; color: #8bc34a; }
+.nosotros { background-color: #eef6ee; padding: 3rem 1rem; border-radius: 15px; max-width: 1000px; margin: 2rem auto; }
+.nosotros h3 { color: #3f51b5; margin-bottom: 1rem; }
+.contacto { padding: 3rem 1rem; text-align: center; }
+.contacto form { display: flex; flex-direction: column; gap: 0.8rem; max-width: 500px; margin: auto; }
+.contacto input, .contacto textarea { padding: 0.7rem; border-radius: 10px; border: 1px solid #ccc; }
+.site-footer { background-color: #3f51b5; color: white; text-align: center; padding: 1.5rem 1rem; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <img src="https://cdn-icons-png.flaticon.com/512/4249/4249572.png" alt="EcoVida logo" class="logo" />
+    </div>
+    <nav class="main-nav">
+      <a href="#">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="cart">
+      <button id="cart-btn">Carrito (<span id="cart-count">0</span>)</button>
+    </div>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h2>Productos naturales, diseño minimalista</h2>
+        <p>Tu estilo de vida sustentable comienza aquí. Simple, limpio y natural.</p>
+        <a href="#productos" class="btn primary">Explorar</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://undraw.co/api/illustrations/clean-up.svg" alt="Ilustración ecológica">
+      </div>
+    </div>
+  </section>
+  <section id="productos" class="productos">
+    <h3>Productos destacados</h3>
+    <div class="grid productos-grid">
+      <article class="card">
+        <img src="https://undraw.co/api/illustrations/organic-products.svg" alt="Jabón natural ilustrado" />
+        <div class="card-body">
+          <h4>Jabón artesanal</h4>
+          <p class="price">$4.50</p>
+          <button class="btn add-btn" data-name="Jabón artesanal" data-price="4.5">Agregar</button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://undraw.co/api/illustrations/recycle.svg" alt="Botella reutilizable ilustrada" />
+        <div class="card-body">
+          <h4>Botella reutilizable</h4>
+          <p class="price">$12.00</p>
+          <button class="btn add-btn" data-name="Botella reutilizable" data-price="12">Agregar</button>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://undraw.co/api/illustrations/tea-time.svg" alt="Té natural ilustrado" />
+        <div class="card-body">
+          <h4>Té natural</h4>
+          <p class="price">$6.00</p>
+          <button class="btn add-btn" data-name="Té natural" data-price="6">Agregar</button>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section id="nosotros" class="nosotros">
+    <h3>Nosotros</h3>
+    <p>EcoVida combina sostenibilidad y diseño limpio. Cada producto es elegido para cuidar tu salud y el planeta.</p>
+  </section>
+  <section id="contacto" class="contacto">
+    <h3>Contacto</h3>
+    <form id="contact-form">
+      <label for="name">Nombre</label>
+      <input id="name" type="text" required />
+      <label for="email">Email</label>
+      <input id="email" type="email" required />
+      <label for="message">Mensaje</label>
+      <textarea id="message" rows="4"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© 2025 EcoVida — Diseño minimalista y sostenible.</p>
+  <div class="socials">Instagram | Facebook</div>
+</footer>
+<script>
+const addButtons = document.querySelectorAll('.add-btn');
+const cartCount = document.getElementById('cart-count');
+let count = 0;
+addButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    count++;
+    cartCount.textContent = count;
+    alert(btn.dataset.name + ' agregado al carrito ($' + btn.dataset.price + ')');
+  });
+});
+const contactForm = document.getElementById('contact-form');
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Gracias por contactarnos, ' + document.getElementById('name').value + '!');
+  contactForm.reset();
+});
+</script>
+</body>
+</html>
